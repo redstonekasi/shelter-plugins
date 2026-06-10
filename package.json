@@ -1,7 +1,7 @@
 {
-  "devDependencies": {
-    "@uwu/lune": "^1.6.3",
-    "@uwu/shelter-defs": "^1.5.1"
-  },
-  "type": "module"
+	"devDependencies": {
+		"@uwu/lune": "^1.6.3",
+		"@uwu/shelter-defs": "^1.5.1"
+	},
+	"type": "module"
 }

@@ -1,14 +1,14 @@
 const {
 	flux: {
 		storesFlat: {
-			UserStore
+			UserStore,
 		},
 		intercept,
 	},
 } = shelter;
 
 let currentId = UserStore.getCurrentUser().id;
-const currentMention = () =>  `<@${currentId}>`;
+const currentMention = () => `<@${currentId}>`;
 
 // Might as well just do this instead of subscribing
 export const onUnload = intercept((data) => {

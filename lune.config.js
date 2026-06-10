@@ -5,8 +5,8 @@
 import { defineConfig } from "@uwu/lune";
 
 export default defineConfig({
-  ssg: {
-    repo_name: "kasimir's plugins",
-    base_url: "https://redstonekasi.github.io/shelter-plugins"
-  }
+	ssg: {
+		repo_name: "kasimir's plugins",
+		base_url: "https://redstonekasi.github.io/shelter-plugins",
+	},
 });
