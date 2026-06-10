@@ -5,13 +5,8 @@
 import { defineConfig } from "@uwu/lune";
 
 export default defineConfig({
-  // this is the directory that your plugins live in.
-  // repoSubDir: "plugins-live-in-here",
-
-  // this enables CSS Module support - see docs for info
-  // cssModules: true,
-
-  // these add extra esbuild plugins into the pipeline.
-  // prePlugins: [],
-  // postPlugins: [],
+  ssg: {
+    repo_name: "kasimir's plugins",
+    base_url: "https://redstonekasi.github.io/shelter-plugins"
+  }
 });

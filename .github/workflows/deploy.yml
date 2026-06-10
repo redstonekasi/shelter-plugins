@@ -24,13 +24,10 @@ jobs:
       - name: Build plugin(s)
         run: pnpm lune ci
 
-      - name: Copy additional files
+      - name: Run SSG
         run: |
           cp -r static/* dist || true
-          cp README.md dist/README.md
-          printf -- "---\npermalink: /404.html\n---\n" > dist/404.md
-          printf -- "> **Note:** You accessed a link that returned a 404, probably by clicking one of the plugin links. You're supposed to copy the link address and add it into shelter.\n\n" >> dist/404.md
-          cat README.md >> dist/404.md
+          pnpm lune ssg ci
 
         # Documentation: https://github.com/peaceiris/actions-gh-pages
       - name: Deploy to GitHub Pages
@@ -38,5 +35,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          # Makes it so the md files in the previous step get processed by GitHub Pages
-          enable_jekyll: true
